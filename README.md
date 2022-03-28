@@ -59,12 +59,12 @@ Each sentence of the AI’s knowledge is represented like the below.
 Every logical sentence in this representation has two parts: a set of cells on the board that are involved in the sentence, and a number count, representing the count of how many of those cells are mines. The above logical sentence says that out of cells A, B, C, D, E, F, G, and H, exactly 1 of them is a mine.
 
 Consider the game below:
-[Minesweeper game where cells can be inferred as safe](img/infer_safe.png)
+![Minesweeper game where cells can be inferred as safe](img/infer_safe.png)
 
 Using the knowledge from the lower-left number, we could construct the sentence {D, E, G} = 0 to mean that out of cells D, E, and G, exactly 0 of them are mines. Intuitively, we can infer from that sentence that all of the cells must be safe. By extension, any time we have a sentence whose count is 0, we know that all of that sentence’s cells must be safe.
 
 Similarly, consider the game below.
-[Minesweeper game where cells can be inferred as mines](img/infer_mines.png)
+![Minesweeper game where cells can be inferred as mines](img/infer_mines.png)
 
 Our AI would construct the sentence {E, F, H} = 3. Intuitively, we can infer that all of E, F, and H are mines. More generally, any time the number of cells is equal to the count, we know that all of that sentence’s cells must be mines.
 
@@ -76,7 +76,7 @@ Likewise, if our AI knew the sentence {A, B, C} = 2, and we were told that C is 
 
 If we’re being even more clever, there’s one final type of inference we can do.
 
-[Minesweeper game where inference by subsets is possible](img/subset_inference.png)
+![Minesweeper game where inference by subsets is possible](img/subset_inference.png)
 
 Consider just the two sentences our AI would know based on the top middle cell and the bottom middle cell. From the top middle cell, we have {A, B, C} = 1. From the bottom middle cell, we have {A, B, C, D, E} = 2. Logically, we could then infer a new piece of knowledge, that {D, E} = 1. After all, if two of A, B, C, D, and E are mines, and only one of A, B, and C are mines, then it stands to reason that exactly one of D and E must be the other mine.
 
