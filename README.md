@@ -1,6 +1,6 @@
-# CS50AI-minesweeper
+# Minesweeper AI
 The goal in this project is to build an AI that can play Minesweeper. 
-(Project description from Harvard's CS50AI course: https://cs50.harvard.edu/ai/2020/projects/1/minesweeper/)
+(Project from Harvard's CS50AI course: https://cs50.harvard.edu/ai/2020/projects/1/minesweeper/)
 
 
 There are two main files in this project: runner.py and minesweeper.py. minesweeper.py contains all of the logic the game itself and for the AI to play the game. runner.py contains all of the code to run the graphical interface for the game.
