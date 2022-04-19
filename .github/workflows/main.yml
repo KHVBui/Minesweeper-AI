@@ -49,7 +49,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest
+          tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/minesweeper-ai:version1.0
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
